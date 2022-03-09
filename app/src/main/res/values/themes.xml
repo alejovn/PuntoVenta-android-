@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PuntoVenta" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#3F3D43</item>
+        <item name="colorPrimaryDark">#3F3D43</item>
+        <item name="colorAccent">#3C403F</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.PuntoVenta.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.PuntoVenta.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.PuntoVenta.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">PuntoVenta</string>
+    <string name="Correo">Correo Electrónico</string>
+    <string name="Contra">Contraseña</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="contraTexto">¿Has olvidado tu contraseña?</string>
+    <string name="nuevaCuenta">Crear cuenta</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellidos</string>
+    <string name="repiteContra">Repita la Contraseña</string>
+    <string name="guardarCorreo">Guardar</string>
+    <string name="codigo">Código de producto</string>
+    <string name="precio">Precio venta</string>
+    <string name="precioC">Precio compra</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="stockMinimo">Stock -</string>
+    <string name="stockMaximo">Stock +</string>
+    <string name="descrip">Descripción de producto</string>
+    <string name="abreviatura">Abreviatura</string>
+    <string name="scan">Scan</string>
+    <string name="title_activity_inicio_app">InicioApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="Estados">
+        <item>Seleccione estado</item>
+        <item>Entrada</item>
+        <item>Salida</item>
+    </string-array>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_usuario">Usuarios</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

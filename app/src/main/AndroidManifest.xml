@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.puntoventa">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:label="Punto Venta"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PuntoVenta">
+
+
+        <activity
+            android:name=".Principal"
+            android:exported="false"
+            android:label="Inicio" />
+        <activity
+            android:name=".Movimientos"
+            android:label="Movimientos"
+            android:parentActivityName=".Principal">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Principal" />
+        </activity>
+        <activity
+            android:name=".Categorias.EditarCategoria"
+            android:label="Editar Categoria"
+            android:parentActivityName=".Categorias.ListaCategorias">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Categorias.ListaCategorias" />
+        </activity>
+        <activity
+            android:name=".Categorias.VerCategoria"
+            android:label="ver categorias"
+            android:parentActivityName=".Categorias.ListaCategorias">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Categorias.ListaCategorias" />
+        </activity>
+        <activity
+            android:name=".Unidades.EditarUnidad"
+            android:label="Editar unidad"
+            android:parentActivityName=".Unidades.ListaUnidades">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Unidades.ListaUnidades" />
+        </activity>
+        <activity
+            android:name=".Unidades.VerUnidad"
+            android:label="Ver unidades"
+            android:parentActivityName=".Unidades.ListaUnidades">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Unidades.ListaUnidades" />
+        </activity>
+        <activity
+            android:name=".Categorias.ListaCategorias"
+            android:label="Lista categorias"
+            android:parentActivityName=".Principal">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Principal" />
+        </activity>
+        <activity
+            android:name=".Categorias.NuevaCategoria"
+            android:label="Nueva categoria"
+            android:parentActivityName=".Categorias.ListaCategorias">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Categorias.ListaCategorias" />
+        </activity>
+        <activity
+            android:name=".Unidades.ListaUnidades"
+            android:label="Lista Unidades"
+            android:parentActivityName=".Principal">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Principal" />
+        </activity>
+        <activity
+            android:name=".Unidades.NuevaUnidad"
+            android:label="Nueva unidad"
+            android:parentActivityName=".Unidades.ListaUnidades">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Unidades.ListaUnidades" />
+        </activity>
+        <activity
+            android:name=".PdfMostrar"
+            android:label="Mostrar Factura"
+            android:parentActivityName=".Principal">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Principal" />
+        </activity>
+        <activity
+            android:name=".Productos.EditarProducto"
+            android:label="Editar producto"/>
+        <activity
+            android:name=".Productos.NuevoProducto"
+            android:label="Nuevo producto"/>
+        <activity
+            android:name=".Productos.VerProducto"
+            android:label=" Ver Producto"/>
+
+        <activity
+            android:name=".Productos.ListaDeProductos"
+            android:label="Lista de productos"
+            android:parentActivityName=".Principal">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Principal" />
+        </activity>
+        <activity
+            android:name=".Inicio"
+            android:label="Caja"
+            android:parentActivityName=".Principal">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Principal" />
+        </activity>
+        <activity
+            android:name=".Usuarios.EditarUsuario"
+            android:label="Ver usuario"
+            android:parentActivityName=".Usuarios.ListaUsuarios">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Usuarios.ListaUsuarios" />
+        </activity>
+        <activity
+            android:name=".Usuarios.VerUsuario"
+            android:label="Ver usuario"
+            android:parentActivityName=".Usuarios.ListaUsuarios">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Usuarios.ListaUsuarios" />
+        </activity>
+        <activity
+            android:name=".Usuarios.NuevoRegistro"
+            android:label="Nuevo Registro"
+            android:parentActivityName=".Usuarios.ListaUsuarios">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Usuarios.ListaUsuarios" />
+        </activity>
+        <activity
+            android:name=".Usuarios.ListaUsuarios"
+            android:label="Lista de usuarios"
+            android:parentActivityName=".Inicio">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio" />
+        </activity>
+        <activity
+            android:name=".Usuarios.CorreoContra"
+            android:label="Crear cuenta"
+            android:parentActivityName=".Usuarios.NombreApellidos">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Usuarios.NombreApellidos" />
+        </activity>
+        <activity
+            android:name=".Usuarios.NombreApellidos"
+            android:label="Crear cuenta"
+            android:parentActivityName=".Usuarios.Registro">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Usuarios.Registro" />
+        </activity>
+        <activity
+            android:name=".Usuarios.Registro"
+            android:label="Crear cuenta"
+            android:parentActivityName=".MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Productos.Capture"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme" />
+    </application>
+
+</manifest>

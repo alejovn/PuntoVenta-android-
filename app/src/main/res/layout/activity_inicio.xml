@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Inicio">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/purple_200"
+                android:backgroundTintMode="add"
+                android:orientation="horizontal">
+
+                <SearchView
+                    android:id="@+id/txtBuscar"
+                    android:layout_width="254dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <Button
+                    android:id="@+id/scan_button"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#038DF4"
+                    android:onClick="abrirScan"
+                    android:text="@string/scan"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/purple_200"
+                    android:backgroundTintMode="add"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/NombreI"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Nombre"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/CodigoI"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="4dp"
+                        android:text="Codigo"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/CantidadI"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="4dp"
+                        android:text="Cantidad"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/listaInventario"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/purple_200"
+                    android:backgroundTintMode="add"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.491"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/CantidadComprar"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:hint="Cantidad"
+                            android:digits="0123456789."
+                            android:inputType="numberDecimal"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/CantidadMenos"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="4dp"
+                        android:backgroundTint="#038DF4"
+                        android:onClick="Facturar"
+                        android:text="Venta -"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/CantidadMas"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="4dp"
+                        android:backgroundTint="#038DF4"
+                        android:onClick="Entrada"
+                        android:text="Entrada +"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/purple_200"
+                    android:backgroundTintMode="add"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/CantidadF"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:backgroundTintMode="add"
+                        android:text="Cantidad"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/DescripcionF"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="4dp"
+                        android:text="Descripción"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/TotalF"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="4dp"
+                        android:text="Total"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/listaFactura"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/purple_200"
+                    android:backgroundTintMode="add"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout1"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.491"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/TotalPagar"
+                            android:layout_width="115dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:hint="Total" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout2"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.491"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/Efectivo"
+                            android:layout_width="115dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:hint="Efectivo"
+                            android:digits="0123456789."
+                            android:inputType="numberDecimal"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/Cobrar"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="4dp"
+                        android:backgroundTint="#038DF4"
+                        android:onClick="Cobrar"
+                        android:text="Cobrar"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
