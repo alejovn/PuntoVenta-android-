@@ -31,7 +31,6 @@ public class DbMovimientos extends DbHelper{
                     "= t_productos.id WHERE t_movimientos.estado = '"+ estado +"'", null);
             if(cursorProductos.moveToFirst()){
                 do {
-                    System.out.println(cursorProductos.getString(0));
                     producto = new VMGlobales();
                     producto.setFecha(cursorProductos.getString(0));
                     producto.setCantidad(cursorProductos.getInt(1));
